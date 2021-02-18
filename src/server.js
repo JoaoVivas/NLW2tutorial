@@ -34,6 +34,8 @@ nunjucks.configure("src/views",{
     coCache: true,
 })
 
+var port_number = server.listen(process.env.PORT || 3000);
+
 server
 .use(express.urlencoded({extended: true}))
 .use(express.static("public"))
@@ -41,4 +43,4 @@ server
 .get("/study", pageStudy)
 .get("/give-classes", pageGiveClasses)
 .post("/save-classes", saveClasses)
-.listen("5000")
+.listen(port_number);

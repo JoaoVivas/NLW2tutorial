@@ -1,0 +1,2 @@
+completebulshite file is for rebuiling the app
+pls heroku build this shit
